@@ -2,11 +2,11 @@ Products Table
 
 1.Retrieve for product
 
-http://localhost:9090/product/displayProducts
+http://localhost:9090/products/displayProducts
 
 2.Store for product
 
-http://localhost:9090/product/storeProducts
+http://localhost:9090/products/storeProducts
 {
   "pid": "p3",
   "pname": "nike",
@@ -17,12 +17,12 @@ http://localhost:9090/product/storeProducts
 
 3.Delete for product
 
-http://localhost:9090/product/deleteProducts/o5
+http://localhost:9090/products/deleteProducts/o5
 
 
 4.Update for product
 
-http://localhost:9090/product/updateProducts
+http://localhost:9090/products/updateProducts
 
 {
   "oid": "p3",

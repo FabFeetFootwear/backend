@@ -14,4 +14,4 @@ Courrier Table-
 		{"coid":"co3","address":"Gujarat","price":1111,"deliveryDate":"2000-02-09"}
 
 
-	Delete-		http://localhost:9090/courrier/delete/c03
+	Delete-		http://localhost:9090/courrier/delete/co3
