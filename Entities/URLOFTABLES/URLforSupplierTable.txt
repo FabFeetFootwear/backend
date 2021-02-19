@@ -1,0 +1,22 @@
+Supplier Table-
+	Retrieve-	http://localhost:9090/supplier/display
+			[{"sid":"s1","sname":"Ram Kumar","username":"kr2345","password":"123456","address":"West Bengal","phone":"9976543210"},
+			{"sid":"s2","sname":"Rita Kumari","username":"kr1234","password":"abc123","address":"Uttar Pradesh","phone":"9748234512"}]
+
+	Store-		http://localhost:9090/supplier/store
+			{
+  				"sid":"s3",
+  				"sname":"Rajesh Rao",
+  				"username":"Rr2345",
+  				"password":"123456",
+  				"address":"Maharashtra",
+  				"phone":"9234567810"
+  			}
+
+	Update-		http://localhost:9090/supplier/update
+			{
+  				"sid":"s3",
+  				"password":"923456"
+ 			}
+
+	Delete-		http://localhost:9090/supplier/delete/s3
