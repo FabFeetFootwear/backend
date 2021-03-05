@@ -47,6 +47,7 @@ public class ProductsService {
 			p.setStatus(pr.getStatus());
 			p.setStock(pr.getStock());
 			p.setPrice(pr.getPrice());
+			p.setImage(pr.getImage());
 			pre.saveAndFlush(p);
 			return "Record updated successfully";
 		}
