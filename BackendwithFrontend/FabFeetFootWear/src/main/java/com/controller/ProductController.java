@@ -2,6 +2,7 @@ package com.controller;
 import org.springframework.http.MediaType;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.service.PricewiseSortingService;
 
 @RestController
 @RequestMapping(value="products")
+@CrossOrigin
 public class ProductController {
  
 	@Autowired
