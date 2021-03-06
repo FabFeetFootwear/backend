@@ -11,6 +11,13 @@ export class RetrieveOrdersComponent implements OnInit {
   OrdersInfo:Array<Orders>=[]
   flag:boolean=false
   constructor(public ordersSer:OrdersService) { }
+
+  ngOnInit(): void {
+  }
+  loadData(){
+    this.flag=true
+    this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+
   msg:string=""
   ngOnInit(): void {
     this.flag=true
@@ -22,5 +29,6 @@ export class RetrieveOrdersComponent implements OnInit {
   }*/
   deleteOrders(oid:any){
     this.ordersSer.deleteOrdersInfo(oid).subscribe(result=>this.msg=result)
+
   }
 }

@@ -12,13 +12,19 @@
 
 
             <div style = "width:50%; margin: 5px auto;">
+
+                <form action = "/register" method = "POST">
+
+
                 
                     <form action = "/register" method = "POST" [formGroup]="customersInfo" (ngSubmit)="storeCustomersDetails()">
+
 
                     
                         
                         
                     
+
                     <div class = "form-group">
                         <label>User ID</label>
                            <input class = "form-control"  type = "text" formControlName = "cid" placeholder = "User ID">
@@ -26,7 +32,25 @@
 
 
 
+
                  <div class = "form-group">
+
+                     <label>username</label>
+                        <input class = "form-control"  type = "text" name = "user" placeholder = "username">
+                    </div>
+                    <div class = "form-group">
+                        <label>password</label>
+                        <input class = "form-control" type = "password" name = "pass" placeholder = "password" required minlenth = "4">
+                    </div>
+                    <div class = "form-group">
+                        <label>First Name</label>
+                        <input  class = "form-control" type = "text" name = "fname" placeholder = "First name">
+                    </div>
+
+                    <div class = "form-group">
+                        <label>Last Name</label>
+                        <input  class = "form-control" type = "text" name = "lname" placeholder = "Last name">
+
                      <label>Name</label>
                         <input class = "form-control"  type = "text" formControlName = "cname" placeholder = "Name">
                     </div>
@@ -43,25 +67,47 @@
                     <div class = "form-group">
                         <label>Email</label>
                         <input  class = "form-control" type = "text" formControlName= "email" placeholder = "Email">
+
                     </div>
 
 
                     <div class = "form-group">
+
+                        <label>email</label>
+                        <input class = "form-control" type = "email" name = "email" placeholder = "email">
+
                         <label>Mobile No</label>
                         <input class = "form-control" type = "number" formControlName = "phone" placeholder = "Phone">
+
                      </div>
 
 
+
+
+                     <div class = "form-group">
+                        <label>Phone number</label>
+                        <input class = "form-control" type = "text" name = "phone" placeholder = "phone number">
+                     </div>
+
+                     <div class = "form-group">
+                        <label>Address</label>
+                        <input class = "form-control" type = "text" name = "address" placeholder = "permanent address">
 
                      
 
                      <div class = "form-group">
                         <label>Address</label>
                         <input class = "form-control" type = "text" formControlName = "address" placeholder = "permanent address">
+
                      </div>
 
 
                    
+
+                    <button class = "btn btn-primary"> Sign Up </button>
+                    <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google+</a>
+                </form>
+
                     <button class = "btn btn-primary" routerLink = ""> Sign Up </button>&nbsp;<br/><br/>
                     <div class = "form-group">
                         <a href = "/login"> <button class = "btn  btn-success">Already have an account </button> </a>
@@ -69,6 +115,7 @@
                     </form>
                    <!-- <a href="www.google.com" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google+</a>
                 
+
 
                 <hr>or<hr>
 
@@ -81,7 +128,7 @@
 
 
 
-                     -->
+
 
                 <a href = "/" style="color:blue">Go Back</a>
 
