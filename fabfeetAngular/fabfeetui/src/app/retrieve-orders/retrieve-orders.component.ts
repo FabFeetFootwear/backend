@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { Orders } from '../orders.model';
+import { OrdersService } from '../orders.service';
+
+@Component({
+  selector: 'app-retrieve-orders',
+  templateUrl: './retrieve-orders.component.html',
+  styleUrls: ['./retrieve-orders.component.css']
+})
+export class RetrieveOrdersComponent implements OnInit {
+  OrdersInfo:Array<Orders>=[]
+  flag:boolean=false
+  constructor(public ordersSer:OrdersService) { }
+  msg:string=""
+  ngOnInit(): void {
+    this.flag=true
+    this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+  }
+  /*loadData(){
+    this.flag=true
+    this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+  }*/
+  deleteOrders(oid:any){
+    this.ordersSer.deleteOrdersInfo(oid).subscribe(result=>this.msg=result)
+  }
+}
