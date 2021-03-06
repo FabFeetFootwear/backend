@@ -17,5 +17,18 @@ export class RetrieveOrdersComponent implements OnInit {
   loadData(){
     this.flag=true
     this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+
+  msg:string=""
+  ngOnInit(): void {
+    this.flag=true
+    this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+  }
+  /*loadData(){
+    this.flag=true
+    this.ordersSer.loadOrderDetails().subscribe(data=>this.OrdersInfo=data)
+  }*/
+  deleteOrders(oid:any){
+    this.ordersSer.deleteOrdersInfo(oid).subscribe(result=>this.msg=result)
+
   }
 }

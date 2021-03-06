@@ -23,6 +23,7 @@ import { StoreOrdersComponent } from './store-orders/store-orders.component';
 import { UpdateOrdersComponent } from './update-orders/update-orders.component';
 import { RetrieveOrdersComponent } from './retrieve-orders/retrieve-orders.component';
 import { DeleteOrdersComponent } from './delete-orders/delete-orders.component';
+
 import { CategorystoreComponent } from './categorystore/categorystore.component';
 import { CategoryretrieveComponent } from './categoryretrieve/categoryretrieve.component';
 import { CategoryupdateComponent } from './categoryupdate/categoryupdate.component';
@@ -32,6 +33,11 @@ import { SupplierdeleteComponent } from './supplierdelete/supplierdelete.compone
 import { SupplierupdateComponent } from './supplierupdate/supplierupdate.component';
 import { SupplierstoreComponent } from './supplierstore/supplierstore.component';
 import {FilterPipe} from './filter.pipe';
+
+import { LogoutComponent } from './logout/logout.component';
+import { FilterPipe } from './filter.pipe';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +59,7 @@ import {FilterPipe} from './filter.pipe';
     UpdateOrdersComponent,
     RetrieveOrdersComponent,
     DeleteOrdersComponent,
+
     CategorystoreComponent,
     CategoryretrieveComponent,
     CategoryupdateComponent,
@@ -63,6 +70,11 @@ import {FilterPipe} from './filter.pipe';
     SupplierstoreComponent,
     FilterPipe
     
+
+    LogoutComponent,
+    FilterPipe,
+    CustomerDashboardComponent
+
   ],
   imports: [
     BrowserModule,

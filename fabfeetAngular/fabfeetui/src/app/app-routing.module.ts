@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
+
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DeleteOrdersComponent } from './delete-orders/delete-orders.component';
 import { DeleteproductComponent } from './deleteproduct/deleteproduct.component';
@@ -15,6 +18,7 @@ import { SignupComponent } from './signup/signup.component';
 import { StoreOrdersComponent } from './store-orders/store-orders.component';
 import { UpdateOrdersComponent } from './update-orders/update-orders.component';
 import { UploadproductComponent } from './uploadproduct/uploadproduct.component';
+
 import { CategoryretrieveComponent } from './categoryretrieve/categoryretrieve.component';
 import { CategoryupdateComponent } from './categoryupdate/categoryupdate.component';
 import { CategorydeleteComponent } from './categorydelete/categorydelete.component';
@@ -26,6 +30,12 @@ import { SupplierstoreComponent } from './supplierstore/supplierstore.component'
 
 const routes: Routes = [
   {path: '', component: DashboardComponent},
+
+
+const routes: Routes = [
+  {path: '',component:CustomerDashboardComponent},
+  {path: 'home', component: DashboardComponent},
+
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'contactus', component: ContactComponent},
@@ -41,11 +51,14 @@ const routes: Routes = [
   {path: 'orders/new',component:StoreOrdersComponent},
   {path: 'orders/update',component:UpdateOrdersComponent},
   {path: 'orders/delete', component:DeleteOrdersComponent},
+
   {path: 'orders/show', component:RetrieveOrdersComponent},
-  
+
+  {path: 'orders/show', component:RetrieveOrdersComponent}
 
 
   //components for manvi
+
 {path:'category/retrieve',component:CategoryretrieveComponent},
 {path:'category/update',component:CategoryupdateComponent},
 {path:'category/delete',component:CategorydeleteComponent},
@@ -55,6 +68,9 @@ const routes: Routes = [
 {path:'supplier/update',component:SupplierupdateComponent},
 {path:'supplier/delete',component:SupplierdeleteComponent},
 {path:'supplier/store',component:SupplierstoreComponent}
+
+
+
   //comoponents for ravishankar
 ];
 
