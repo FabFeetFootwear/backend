@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormControl, FormGroup } from '@angular/forms';
 import { from } from 'rxjs';
 import { CustomerService} from '../customer.service'
+
 
 @Component({
   selector: 'app-signup',
@@ -9,6 +11,13 @@ import { CustomerService} from '../customer.service'
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
+  // constructor() { }
+
+  // ngOnInit(): void {
+  // }
+
+
   
     customersInfo =new FormGroup({
       cid:new FormControl(),
@@ -30,4 +39,5 @@ export class SignupComponent implements OnInit {
     console.log(custRef)
     this.customerService.storeCustomersInfo(custRef).subscribe(result=>this.msg=result)
   }
+
 }

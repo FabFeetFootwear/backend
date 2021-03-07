@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { Customer } from '../customer.model';
 import { CustomerService } from '../customer.service';
 
@@ -10,9 +11,13 @@ import { CustomerService } from '../customer.service';
 })
 export class LoginComponent implements OnInit {
   msg:string=""
+
+  //constructor(public router:Router) { }   //DI for Router which help to do routing programmatially
+
   customer = new Customer();
   customer1 =new Customer();
   constructor(public router:Router,public customerService:CustomerService) { }   //DI for Router which help to do routing programmatially
+
 
   ngOnInit(): void {
   }
@@ -22,6 +27,9 @@ export class LoginComponent implements OnInit {
     //console.log(userRef)
     let user = userRef.user;
     let pass  = userRef.pass;
+
+    //if(user=="Raj" && pass=="123"){
+
     this.customer.username=user;
     this.customer.password=pass;
     this.customerService.checkLogin(this.customer).subscribe(obj=>{
@@ -35,6 +43,7 @@ export class LoginComponent implements OnInit {
       }
     })
     /*if(user=="Raj" && pass=="123"){
+
       console.log("Successfully Login")
       this.router.navigate(["home"])
     }else {
@@ -43,7 +52,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  
 
   this.userSer.checkUserService(userRef).subscribe(data=> {
     //let user = data.user;
@@ -59,5 +67,8 @@ export class LoginComponent implements OnInit {
   },error=>console.log(error))
 
   */
-}
-}
+
+
+    }
+
+  }

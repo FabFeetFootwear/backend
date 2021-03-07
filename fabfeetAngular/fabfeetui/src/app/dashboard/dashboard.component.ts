@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Category } from '../category.model';
+import { CategoryserviceService } from '../categoryservice.service';
+
 import { Orders } from '../orders.model';
 import { OrdersService } from '../orders.service';
 import { Product } from '../product.model';
@@ -13,17 +17,30 @@ export class DashboardComponent implements OnInit {
 
   productInfo:Array<Product>=[];
   ordersInfo:Array<Orders>=[];
+
+  categoryInfo:Array<Category>=[];
   flag:boolean = false;
 
-  constructor(public productSer:ProductService,public ordersSer:OrdersService) { }
+  constructor(public productSer:ProductService,public ordersSer:OrdersService,public categoryser:CategoryserviceService) { }
+
+  // flag:boolean = false;
+
+  // constructor(public productSer:ProductService,public ordersSer:OrdersService) { }
+
 
   ngOnInit(): void {
     this.flag=true;
     this.productSer.loadProductDetails().subscribe(data=>this.productInfo=data);
     this.ordersSer.loadOrderDetails().subscribe(data1=>this.ordersInfo=data1);
+
+    this.categoryser.loadCategoryDetails().subscribe(data1=>this.categoryInfo=data1);
   }
+searchText:string="";
+
+  
   addToCart(name:any){
     console.log("Event Fired")
     console.log(name)
   }
+
 }

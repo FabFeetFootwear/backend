@@ -23,9 +23,22 @@ import { StoreOrdersComponent } from './store-orders/store-orders.component';
 import { UpdateOrdersComponent } from './update-orders/update-orders.component';
 import { RetrieveOrdersComponent } from './retrieve-orders/retrieve-orders.component';
 import { DeleteOrdersComponent } from './delete-orders/delete-orders.component';
+
+import { CategorystoreComponent } from './categorystore/categorystore.component';
+import { CategoryretrieveComponent } from './categoryretrieve/categoryretrieve.component';
+import { CategoryupdateComponent } from './categoryupdate/categoryupdate.component';
+import { CategorydeleteComponent } from './categorydelete/categorydelete.component';
+import { SupplierretrieveComponent } from './supplierretrieve/supplierretrieve.component';
+import { SupplierdeleteComponent } from './supplierdelete/supplierdelete.component';
+import { SupplierupdateComponent } from './supplierupdate/supplierupdate.component';
+import { SupplierstoreComponent } from './supplierstore/supplierstore.component';
+
+
 import { LogoutComponent } from './logout/logout.component';
 import { FilterPipe } from './filter.pipe';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +60,23 @@ import { CustomerDashboardComponent } from './customer-dashboard/customer-dashbo
     UpdateOrdersComponent,
     RetrieveOrdersComponent,
     DeleteOrdersComponent,
+
+    CategorystoreComponent,
+    CategoryretrieveComponent,
+    CategoryupdateComponent,
+    CategorydeleteComponent,
+    SupplierretrieveComponent,
+    SupplierdeleteComponent,
+    SupplierupdateComponent,
+    SupplierstoreComponent,
+    
+    
+
     LogoutComponent,
     FilterPipe,
-    CustomerDashboardComponent
+    CustomerDashboardComponent,
+    AdminLoginComponent
+
   ],
   imports: [
     BrowserModule,
